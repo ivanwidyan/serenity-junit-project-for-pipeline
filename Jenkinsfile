@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout SCM') {
       steps {
-        git(url: 'https://github.com/ivanwidyan/example-automation-for-pipeline.git', branch: 'develop')
+        git(url: 'https://github.com/ivanwidyan/example-automation-for-pipeline.git', branch: 'master')
       }
     }
     stage('Smoke Test') {
