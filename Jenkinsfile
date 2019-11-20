@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout SCM') {
       steps {
-        git(url: 'https://github.com/ivanwidyan/example-automation-for-pipeline.git', branch: 'master')
+        git(url: 'https://github.com/ivanwidyan/example-automation-for-pipeline.git', branch: 'develop')
       }
     }
     stage('Smoke Test') {
@@ -28,11 +28,6 @@ pipeline {
             bat 'mvn clean verify -Drunner.class=FirefoxRunner'
           }
         }
-      }
-    }
-    stage('Results') {
-      steps {
-        junit '**/target/failsafe-reports/*.xml'
       }
     }
   }
