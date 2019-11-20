@@ -13,19 +13,19 @@ pipeline {
     }
     stage('API Test') {
       steps {
-        bat 'mvn clean verify -Drunner.class=ApiRunner'
+        bat 'mvn verify -Drunner.class=ApiRunner'
       }
     }
     stage('UI Test') {
       parallel {
         stage('Chrome') {
           steps {
-            bat 'mvn clean verify -Drunner.class=ChromeRunner'
+            bat 'mvn verify -Drunner.class=ChromeRunner'
           }
         }
         stage('Firefox') {
           steps {
-            bat 'mvn clean verify -Drunner.class=FirefoxRunner'
+            bat 'mvn verify -Drunner.class=FirefoxRunner'
           }
         }
       }
