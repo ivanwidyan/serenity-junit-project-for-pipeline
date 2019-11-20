@@ -1,2 +1,1 @@
-# example-automation-for-pipeline
-Example Automation Project For Pipeline
+# Example Automation For Pipeline Project
