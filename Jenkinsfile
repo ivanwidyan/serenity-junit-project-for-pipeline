@@ -30,5 +30,10 @@ pipeline {
         }
       }
     }
+    stage('Results') {
+      steps {
+        junit '**/target/failsafe-reports/*.xml'
+      }
+    }
   }
 }

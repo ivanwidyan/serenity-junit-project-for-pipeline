@@ -17,7 +17,7 @@ public class ChromeRunner {
     private SampleUI sampleUI;
 
     @Test
-    public void searchGoogle() {
+    public void searchGoogleChrome() {
         sampleUI.doSearch();
     }
 }

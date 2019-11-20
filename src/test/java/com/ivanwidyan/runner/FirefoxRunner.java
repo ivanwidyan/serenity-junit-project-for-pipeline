@@ -17,7 +17,7 @@ public class FirefoxRunner {
     private SampleUI sampleUI;
 
     @Test
-    public void searchGoogle() {
+    public void searchGoogleFirefox() {
         sampleUI.doSearch();
     }
 }
