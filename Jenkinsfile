@@ -8,12 +8,12 @@ pipeline {
     }
     stage('Smoke Test') {
       steps {
-        bat 'mvn clean -Drunner.class=SmokeRunner'
+        bat 'mvn clean verify -Drunner.class=SmokeRunner'
       }
     }
     stage('API Test') {
       steps {
-        bat 'mvn clean -Drunner.class=ApiRunner'
+        bat 'mvn clean verify -Drunner.class=ApiRunner'
       }
     }
     stage('UI Test') {
