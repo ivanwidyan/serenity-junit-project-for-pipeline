@@ -32,7 +32,14 @@ pipeline {
     }
     stage('Results') {
       steps {
-        junit '**/target/failsafe-reports/*.xml'
+        publishHTML (target: [
+          allowMissing: false,
+          alwaysLinkToLastBuild: false,
+          keepAll: true,
+          reportDir: 'target/site/serenity',
+          reportFiles: 'index.html',
+          reportName: "Serenity Report"
+        ])
       }
     }
   }
